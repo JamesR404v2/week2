@@ -11,13 +11,30 @@ public class App {
 	}
 
 	private void execute() {
+						
 		// Your code goes here, not in the main() method
 		// This removes any need to consume statics
-		// The code below is to be deleted once you understand what it does
-		System.out.println(AppConstants.EXAMPLE_CONSTANT);
-		System.out.println(" 2 * 17 = " + myService.multiply(2, 17));
-		System.out.println("Contents of the file at " + AppConstants.EXAMPLE_FILE_PATH);
-		System.out.println(myService.fileContents(AppConstants.EXAMPLE_FILE_PATH));
+		
+		// requirements: https://proffesso.com/students/courses/274/sections/674/lessons/4798
+		
+				java.util.Scanner typedInput = new java.util.Scanner(System.in);
+
+				System.out.println("Type a number between 50 and 300");
+
+				String userInput = typedInput.nextLine();
+				
+				Integer numberizedInput = Integer.parseInt(userInput);
+
+				if (numberizedInput > 50 && numberizedInput < 300) {  
+				    	System.out.println("Yes");
+				  
+				}
+				else
+				{
+					System.out.println("No");
+				}
+		
+
 	}
 
 }
